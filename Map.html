@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="Style.css">
+    <link rel="shortcut icon"  href="https://cdn.icon-icons.com/icons2/664/PNG/512/construction_project_plan_building_architect_design_develop-59_icon-icons.com_60236.png"/>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        /* Always set the map height explicitly to define the size of the div
+         * element that contains the map. */
+        #map {
+            height: 100%;
+        }
+        /* Optional: Makes the sample page fill the window. */
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+    <title>Map</title>
+</head>
+<body class="background">
+<div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="index.html"><h5>Home</h5></a>
+    <a href="Table.html"><h5>Table and Charts</h5></a>
+</div>
+
+<script>
+    function openNav() {
+        document.getElementById("mySidenav").style.width = "125px";
+        document.getElementById("main").style.marginLeft = "125px";
+    }
+
+    /* Set the width of the side navigation to 0 and the left margin of the page content to 0, and the background color of body to white */
+    function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+        document.getElementById("main").style.marginLeft = "0";
+    }
+</script>
+
+<div id = "sidemenubtn">
+    <span onclick="openNav()" onmouseover="showsidemenubtn()"><button class="btn"><i class="fa fa-bars"></i></button></span>
+</div>
+<div id="main">
+
+    <div class = "container">
+        <div class="row">
+            <div class="col-xl-12">
+                <h4>Map</h4>
+            </div>
+        </div>
+        <hr>
+        <div class = "row ">
+            <div class="col-md-12">
+                <h6>You can use the buttons to select what filter do you want to apply on the map.</h6>
+            </div>
+        </div>
+        <hr>
+        <div class = "container">
+            <div class="row">
+                <div class = "col-md-8">
+                    <div id="map"></div>
+                </div>
+                <div class = "col-md-2">
+                    <nav class = "botonesmelos">
+                        <a href="#"><button type="button" name="botoncito" id="housing">Housing</button></a>
+                        <a href="#"><button type="button" name="botoncito" id="museums">Museums</button></a>
+                        <a href="#"><button type="button" name="botoncito" id="districts">Districts</button></a>
+                        <a href="Map.html"><button type="button" name="botoncito">Clear</button></a>
+                    </nav>
+                </div><!--Huehuehuehue-->
+            </div>
+            <hr>
+        </div>
+    </div>
+</div>
+<script
+        src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous">
+</script>
+<script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCDXfIt1ZtQaP_etPATgkn1DYO9ewclRrY&callback=initMap">
+</script>
+<script type="text/javascript" src="Main.js">
+</script>
+</body>
+</html>
